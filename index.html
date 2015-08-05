@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Ticket Canvas</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+<div class="main" ng-app="TicketPrint" ng-controller="MainController">
+    <div class="angularContainer">
+        <input class="form-control" type="text" placeholder="block" ng-model="ticketInfo.block">
+        <input class="form-control" type="text" placeholder="row" ng-model="ticketInfo.row">
+        <input class="form-control" type="text" placeholder="seat" ng-model="ticketInfo.seat">
+        <input class="form-control" type="text" placeholder="price" ng-model="ticketInfo.price">
+        <input id="mainPicture" type="file">
+        <input id="barcodePicture" type="file">
+
+        <button ng-click="printTicket()">Print</button>
+    </div>
+    <div class="canvasContainer">
+        <canvas id="ticketCvs"></canvas>
+    </div>
+</div>
+</body>
+</html>
