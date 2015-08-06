@@ -111,6 +111,6 @@ app.controller('MainController', function ($scope) {
         element.style.width = '10cm';
         win.document.body.innerHTML = element.outerHTML;
         win.print();
-        //win.close();
+        win.close();
     }
 });
