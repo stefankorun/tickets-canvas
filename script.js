@@ -5,7 +5,10 @@ app.controller('MainController', function ($scope) {
     var ctx = canvas.getContext('2d');
 
     var mainImage = new Image();
+    mainImage.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAA1BMVEUAAACnej3aAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==';
     var barcodeImage = new Image();
+    barcodeImage.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAA1BMVEUAAACnej3aAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==';
+
 
     $scope.ticketInfo = {};
 
