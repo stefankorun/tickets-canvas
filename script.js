@@ -10,18 +10,18 @@ app.controller('MainController', function ($scope) {
     $scope.ticketInfo = {};
 
     var dimensions = {
-        margin: 30,
+        margin: 15,
         input: {
-            height: 60,
-            width: 280
+            height: 30,
+            width: 140
         },
         image: {
-            height: 380,
-            width: 1210
+            height: 190,
+            width: 605
         },
         barcode: {
-            height: 420,
-            width: 160
+            height: 210,
+            width: 80
         }
     };
 
@@ -29,10 +29,11 @@ app.controller('MainController', function ($scope) {
         var width = canvasContainer.width();
         var height = canvasContainer.height();
 
-        canvas.width = width * 2;//horizontal resolution (?) - increase for better looking text
-        canvas.height = height * 2;//vertical resolution (?) - increase for better looking text
+        canvas.width = width * 3;//horizontal resolution (?) - increase for better looking text
+        canvas.height = height * 3;//vertical resolution (?) - increase for better looking text
         canvas.style.width = width + 'px';//actual width of canvas
         canvas.style.height = height + 'px';//actual height of canvas
+        ctx.setTransform(3, 0, 0, 3, 0, 0);
 
         ctx.translate(0.5, 0.5);
     }());
@@ -68,9 +69,9 @@ app.controller('MainController', function ($scope) {
                 dimensions.input.height
             );
 
-            var textBaselineFix = 40;
+            var textBaselineFix = 20;
             var models = ['block', 'row', 'seat', 'price'];
-            ctx.font = "25px sans-serif";
+            ctx.font = "17px sans-serif";
             ctx.fillText(
                 $scope.ticketInfo[models[i]],
                 2 * dimensions.margin + i * (dimensions.margin + dimensions.input.width),
