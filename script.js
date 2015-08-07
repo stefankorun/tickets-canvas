@@ -111,7 +111,7 @@ app.controller('MainController', function ($scope) {
         var win = window.open();
         var element = document.createElement('img');
         element.src = canvas.toDataURL();
-        element.style.width = '10cm';
+        element.style.width = '17cm';
         win.document.body.innerHTML = element.outerHTML;
         win.print();
         win.close();
